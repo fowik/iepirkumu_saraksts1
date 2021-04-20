@@ -1,10 +1,17 @@
-document.getElementById('newPurchase').addEventListener('click', () => {
-    let popUp = document.getElementById('popUp');
+const POP_UP = document.getElementById('popUp');
 
-    popUp.style.display = 'block';
+document.getElementById('newPurchase').addEventListener('click', () => {
+    POP_UP.style.display = 'block';
 })
 
-document.getElementsByClassName('addPurchase').addEventListener('click', () => {
+document.getElementById('addPurchase').addEventListener('click', () => {
+    POP_UP.style.display = 'none';
 
+    let iepirkums = {purchase: purchase.value, daudzums: daudzums.value};
+     
+    purchase.value = ""
+    daudzums.value = ""
+
+    console.log(iepirkums);
 })
 
