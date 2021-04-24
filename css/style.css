@@ -121,3 +121,23 @@ form {
     width: 22.5%;
     height: 25%;
 }
+
+.iepirkumaList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.iepirkumiS {
+    color: ivory;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: none;
+    border-radius: 15px;
+    height: 150px;
+    width: 250px;
+    margin-top: 45px;
+    margin-left: 20px;
+    background-color: black;
+}
