@@ -1,5 +1,6 @@
 const POP_UP = document.getElementById('popUp');
 const IEPIRKUMALIST = document.getElementById('iepirkumaList');
+const list = document.querySelector('#iepirkumaList')
 let iepirkumi = [];
 
 
@@ -10,8 +11,6 @@ window.addEventListener('load', () => {
 });
 
 //Izdēs lapiņas
-const list = document.querySelector('#iepirkumaList')
-
 list.addEventListener('click', (e) => {
     if(e.target.className == 'del'){
       const li = e.target.parentElement;
@@ -21,14 +20,17 @@ list.addEventListener('click', (e) => {
     };
 });
 
+//Pievieno pop_up, kurā var rakstīt inputā.
 document.getElementById('newPurchase').addEventListener('click', () => {
     POP_UP.style.display = 'block';
 })
 
+//Poga, ar kuru var aizstaisit ciet pop_up'u
 document.getElementById('x').addEventListener('click', () => {
     POP_UP.style.display = 'none';
 })
 
+//Pievieno jaunu iepirkumu
 document.getElementById('addPurchase').addEventListener('click', () => {
     POP_UP.style.display = 'none';
 

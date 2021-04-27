@@ -8,17 +8,24 @@ h1 {
     font-size: 56px;
     font-style: italic;
     color:#f1c40f;
+    font-family: 'Original Surfer', cursive;
 }
 
 h2 {
     color: #f1c40f;
     font-size:38px;
     margin-top: 0px;
+    font-family: 'Original Surfer', cursive;
 }
 
 h3 {
     text-align: left;
     margin-left: 10px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
 }
 
 #button {
@@ -39,6 +46,7 @@ h3 {
     -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
     outline: none;
+    font-family: 'Original Surfer', cursive;
   }
 
 #newPurchase:hover {
@@ -61,6 +69,7 @@ h3 {
     outline: none;
     border: none;
     border-radius: 16px;
+    font-family: 'Original Surfer', cursive;
   } 
 
 #addPurchase:hover { 
@@ -68,8 +77,8 @@ h3 {
 }
 
 #addPurchase:active {
-background: rgb(33,147,90);
-box-shadow: 0 3px rgb(33,147,90) inset;
+    background: rgb(33,147,90);
+    box-shadow: 0 3px rgb(33,147,90) inset;
 }
 
 input#purchase {
@@ -81,6 +90,7 @@ input#purchase {
     border-radius: 2px;
     border: 2px;
     outline: none;
+    font-family: 'Original Surfer', cursive;
 }
 
 input#daudzums {
@@ -92,6 +102,7 @@ input#daudzums {
     border-radius: 2px;
     border: 2px;
     outline: none;
+    font-family: 'Original Surfer', cursive;
 }
 
 #popUp {
@@ -107,9 +118,9 @@ input#daudzums {
     font-size: 20px;
 }
 
-#deleteBtn {
+.del {
     width: 70px;
-    height: 40px;
+    height: 22px;
     border: solid;
     border-radius: 20px;
     border-color: #e74c3c;
@@ -118,12 +129,10 @@ input#daudzums {
     -webkit-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
     outline: none;
-    
-    margin-left: 65%;
-    margin-bottom: 20px;
-}
+    margin-top: 45px;
+}   
 
-#deleteBtn:hover {
+.del:hover {
     box-shadow: 0 0 100px 0 #e74c3c inset, 0 0 10px 4px #e74c3c;
     outline: none;
   }
@@ -135,7 +144,7 @@ form {
     padding: 20px;
     border: none;
     width: 22.5%;
-    height: 25%;
+    height: 27.5%;
 }
 
 #iepirkumaList {
@@ -157,6 +166,7 @@ form {
     font-weight: 700;
     color: white;
     text-decoration: none;
+    font-family: 'Original Surfer', cursive;
 }
 
 #x:hover { 
@@ -169,6 +179,7 @@ form {
 }
 
 .iepirkumiS {
+    padding: 2px;
     color: ivory;
     display: flex;
     flex-direction: column;
@@ -176,8 +187,13 @@ form {
     border: none;
     border-radius: 15px;
     height: 200px;
-    width: 225px;
+    min-width: 200px;
     margin-top: 20px;
     margin-left: 10px;
     background-color: #1D1B26;
+    overflow-wrap: break-word ;
+    padding: 10px;
+    margin: 10px;
+    overflow-wrap: break-word ;
+    font-family: 'Original Surfer', cursive;
 }
