@@ -1,5 +1,5 @@
 const POP_UP = document.getElementById('popUp');
-const iepirkumaList = document.getElementById('iepirkumaList');
+const IEPIRKUMALIST = document.getElementById('iepirkumaList');
 let iepirkumi = [];
 
 
@@ -7,6 +7,18 @@ window.addEventListener('load', () => {
     iepirkumi = JSON.parse(localStorage.getItem("iepirkumi") || "[]");
     console.log(iepirkumi)
     render();
+});
+
+//Izdēs lapiņas
+const list = document.querySelector('#iepirkumaList')
+
+list.addEventListener('click', (e) => {
+    if(e.target.className == 'del'){
+      const li = e.target.parentElement;
+      li.parentNode.removeChild(li);
+      iepirkumi.splice(li, 1);
+      localStorage.setItem('iepirkumi',JSON.stringify(iepirkumi));
+    };
 });
 
 document.getElementById('newPurchase').addEventListener('click', () => {
@@ -31,24 +43,18 @@ document.getElementById('addPurchase').addEventListener('click', () => {
 })
 
 function render() {
-    iepirkumaList.innerHTML = "";
+    IEPIRKUMALIST.innerHTML = "";
 
     for(let i = 0; i < iepirkumi.length; i++) {
         let iepirkumiS = `        
-        <div class="iepirkumiS">
+        <li class="iepirkumiS">
             <h3>Iepirkums: ${iepirkumi[i].purchase}</h3>
             <h3>Daudzums: ${iepirkumi[i].daudzums}</h3>
-            <button id="deleteBtn">Dzēst</button>
-        </div>`;
-        iepirkumaList.innerHTML += iepirkumiS;
+            <button class="del">Delete</button>
+        </li>`;
+        IEPIRKUMALIST.innerHTML += iepirkumiS;
     }
 
     localStorage.setItem('iepirkumi', JSON.stringify(iepirkumi));
 
 }
-
-document.getElementById('deleteBtn').addEventListener('click', () => {
-    
-    iepirkumaList.style.display = 'none';
-
-})
