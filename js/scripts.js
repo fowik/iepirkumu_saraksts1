@@ -1,5 +1,7 @@
 const POP_UP = document.getElementById('popUp');
+const iepirkumaList = document.getElementById('iepirkumaList');
 let iepirkumi = [];
+
 
 window.addEventListener('load', () => {
     iepirkumi = JSON.parse(localStorage.getItem("iepirkumi") || "[]");
@@ -9,6 +11,10 @@ window.addEventListener('load', () => {
 
 document.getElementById('newPurchase').addEventListener('click', () => {
     POP_UP.style.display = 'block';
+})
+
+document.getElementById('x').addEventListener('click', () => {
+    POP_UP.style.display = 'none';
 })
 
 document.getElementById('addPurchase').addEventListener('click', () => {
@@ -25,7 +31,6 @@ document.getElementById('addPurchase').addEventListener('click', () => {
 })
 
 function render() {
-    let iepirkumaList = document.getElementById('iepirkumaList');
     iepirkumaList.innerHTML = "";
 
     for(let i = 0; i < iepirkumi.length; i++) {
@@ -41,3 +46,9 @@ function render() {
     localStorage.setItem('iepirkumi', JSON.stringify(iepirkumi));
 
 }
+
+document.getElementById('deleteBtn').addEventListener('click', () => {
+    
+    iepirkumaList.style.display = 'none';
+
+})
